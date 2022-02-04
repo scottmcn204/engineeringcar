@@ -1,6 +1,6 @@
 radio.set_group(5)
 drsOn = False
-
+on_received_number(3)
 def on_received_number(receivedNumber):
     if receivedNumber == 0:
         basic.show_leds("""
@@ -41,6 +41,5 @@ def on_received_number(receivedNumber):
         if drsOn == True:
             drsOn = False
             servos.P2.set_angle(0)
-
 
 radio.on_received_number(on_received_number)

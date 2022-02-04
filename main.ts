@@ -1,6 +1,7 @@
 radio.setGroup(5)
 let drsOn = false
-radio.onReceivedNumber(function on_received_number(receivedNumber: number) {
+on_received_number(3)
+function on_received_number(receivedNumber: number) {
     let drsOn: boolean;
     let drsON: boolean;
     if (receivedNumber == 0) {
@@ -50,4 +51,6 @@ radio.onReceivedNumber(function on_received_number(receivedNumber: number) {
         
     }
     
-})
+}
+
+radio.onReceivedNumber(on_received_number)
