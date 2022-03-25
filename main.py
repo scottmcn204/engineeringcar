@@ -1,6 +1,5 @@
 radio.set_group(5)
 servos.P2.set_angle(0)
-#pins.servo_write_pin(AnalogPin.P2, 0)
 on_received_number(3)
 def on_received_number(receivedNumber):
     if receivedNumber == 0:
@@ -14,18 +13,17 @@ def on_received_number(receivedNumber):
         pins.digital_write_pin(DigitalPin.P0, 1)
         pins.digital_write_pin(DigitalPin.P1, 0)
         servos.P2.set_angle(90)
-        #pins.servo_write_pin(AnalogPin.P2, 0)
     elif receivedNumber == 1:
         basic.show_leds("""
         . . . . .
         . . . . .
-        . . . . .
+        . . # . .
         . . . . .
         . . . . .
         """)
         pins.digital_write_pin(DigitalPin.P0, 0)
         pins.digital_write_pin(DigitalPin.P1, 1)
-        servos.P2.set_angle(45)
+        servos.P2.set_angle(60)
         #pins.servo_write_pin(AnalogPin.P2, 30)
     elif receivedNumber == 3:
         basic.show_leds("""
@@ -38,7 +36,6 @@ def on_received_number(receivedNumber):
         pins.digital_write_pin(DigitalPin.P0, 0)
         pins.digital_write_pin(DigitalPin.P1, 0)
         servos.P2.set_angle(90)
-        #pins.servo_write_pin(AnalogPin.P2, 0)
 
 radio.on_received_number(on_received_number)
 
