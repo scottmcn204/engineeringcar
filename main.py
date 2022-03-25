@@ -6,9 +6,9 @@ def on_received_number(receivedNumber):
     if receivedNumber == 0:
         basic.show_leds("""
         # # # # #
-        # . . . .
         # # # # #
-        . . . . #
+        # # # # #
+        # # # # #
         # # # # #
         """)
         pins.digital_write_pin(DigitalPin.P0, 1)
@@ -17,11 +17,11 @@ def on_received_number(receivedNumber):
         #pins.servo_write_pin(AnalogPin.P2, 0)
     elif receivedNumber == 1:
         basic.show_leds("""
-        # # # # #
-        # . . . .
-        # # # # #
-        # . . . .
-        # . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
         """)
         pins.digital_write_pin(DigitalPin.P0, 0)
         pins.digital_write_pin(DigitalPin.P1, 1)
